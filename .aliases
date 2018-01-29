@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# A set of common aliases.
+#
+# Sean Nesdoly
+# 2017-08-15
 
 # shortcuts
 alias rm="rm -i"
