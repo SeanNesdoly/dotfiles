@@ -11,6 +11,9 @@ export EDITOR='vim';
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
 
+# Configure java
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
