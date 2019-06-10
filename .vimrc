@@ -1,6 +1,6 @@
 " Configuration file for Vim
-" Sean Nesdoly 
-" 2017-01-29
+" Sean Nesdoly
+" Date created: 2017-01-29
 
 " Vundle Plugins
 set nocompatible	" be iMproved
@@ -18,7 +18,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -34,7 +34,7 @@ filetype plugin indent on
 " Put your non-Plugin stuff after this line
 
 " UI configurations
-colorscheme wombat256i  " Vim's colorscheme. other options: molokai, solarized, wombat
+"colorscheme wombat256i  " Vim's colorscheme. other options: molokai, solarized, wombat
 set wildmenu            " visual autocomplete for the command menu
 set showmatch 	        " highlight matching [{()}]
 
@@ -43,8 +43,8 @@ syntax enable           " enable syntax processing
 set spelllang=en_ca     " canadian spellchecking
 
 " Tab settings
-set tabstop=4       " number of spaces a tab counts for 
-set softtabstop=4   " sets the number of columns for a tab 
+set tabstop=4       " number of spaces a tab counts for
+set softtabstop=4   " sets the number of columns for a tab
 set shiftwidth=4    " indents will have a width of 4
 set expandtab       " tabs are spaces!
 
