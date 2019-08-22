@@ -513,10 +513,10 @@ you should place your code here."
           "pdflatex -interaction nonstopmode -output-directory %o %f"))
 
   ;; Bibtex defaults
-  (setq org-ref-default-bibliography '("~/bibliography/master.bib")
+  (setq org-ref-default-bibliography '("~/bibliography/Mendeley/library.bib")
         org-ref-pdf-directory "~/bibliography/bibtex-pdfs/"
         org-ref-bibliography-notes "~/bibliography/notes.org")
-  (setq bibtex-completion-bibliography "~/bibliography/master.bib"
+  (setq bibtex-completion-bibliography "~/bibliography/Mendeley/library.bib"
         bibtex-completion-library-path "~/bibliography/bibtex-pdfs")
 
   ;; Open pdf with system pdf viewer (works on mac)
