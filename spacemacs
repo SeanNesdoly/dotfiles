@@ -33,8 +33,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(javascript
-     rust
+   '(yaml
      helm
      ranger
      fasd
@@ -49,6 +48,12 @@ This function should only modify configuration layer settings."
      latex
      bibtex
      ;; <<Coding Tools>>
+     julia
+     php
+     javascript
+     rust
+     python
+     java
      version-control
      git
      emacs-lisp
@@ -57,8 +62,6 @@ This function should only modify configuration layer settings."
      markdown
      octave ;; MATLAB syntax highlighting
      (ess :variables ess-indent-with-fancy-comments nil)
-     python
-     java
      shell-scripts
      (shell :variables
             shell-default-height 50
