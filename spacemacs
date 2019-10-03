@@ -492,7 +492,8 @@ you should place your code here."
     (setq org-user-mail-address "srnesdoly@gmail.com")
     (setq org-list-demote-modify-bullet
           '(("-" . "+") ("+" . "*") ("*" . "-")))
-    (setq org-goto-auto-isearch nil))
+    (setq org-goto-auto-isearch nil)
+    (setq org-startup-indented t))
     ;; (org-babel-do-load-languages
     ;;   'org-babel-load-languages
     ;;   '((R . t)
