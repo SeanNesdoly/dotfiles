@@ -474,9 +474,13 @@ you should place your code here."
 
   (setq-default tab-width 4)
 
-  ;; Activate auto-fill-mode everywhere
+  ;; Activate auto-fill-mode to automatically break lines
   (add-hook 'prog-mode-hook 'auto-fill-mode)
   (add-hook 'text-mode-hook 'auto-fill-mode)
+
+  ;; Activate column indicator
+  (add-hook 'prog-mode-hook 'turn-on-fci-mode)
+  (add-hook 'text-mode-hook 'turn-on-fci-mode)
 
   ;; Break lines
   ;; 2019-06-05: this seems to break auto-indentation of plain lists in org mode
