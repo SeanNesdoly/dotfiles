@@ -490,6 +490,7 @@ before packages are loaded."
   ;; Activate column indicator
   (add-hook 'prog-mode-hook 'turn-on-fci-mode)
   (add-hook 'text-mode-hook 'turn-on-fci-mode)
+  (add-hook 'org-mode-hook 'turn-off-fci-mode)
 
   ;; Break lines
   ;; 2019-06-05: this seems to break auto-indentation of plain lists in org mode
