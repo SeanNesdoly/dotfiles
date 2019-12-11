@@ -41,7 +41,7 @@ This function should only modify configuration layer settings."
      html
      better-defaults
      (spell-checking :variables spell-checking-enable-by-default nil)
-     (syntax-checking :variables syntax-checking-enable-by-default nil)
+     syntax-checking
      (org :variables
           org-enable-github-support t
           org-enable-hugo-support t
