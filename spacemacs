@@ -528,9 +528,6 @@ before packages are loaded."
           "pdflatex -interaction nonstopmode -output-directory %o %f"
           "pdflatex -interaction nonstopmode -output-directory %o %f"))
 
-  ;; Set colour of hyperlinks when exporting org files to PDF
-  (setq org-latex-packages-alist '("\\hypersetup{colorlinks=true, linkcolor=blue}"))
-
   ;; Bibtex defaults
   (setq org-ref-default-bibliography '("~/bibliography/Mendeley/library.bib")
         org-ref-pdf-directory "~/bibliography/bibtex-pdfs/"
