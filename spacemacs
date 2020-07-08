@@ -532,7 +532,11 @@ before packages are loaded."
     (setq org-ellipsis "⤵")
     (setq org-user-mail-address "srnesdoly@gmail.com")
     (setq org-list-demote-modify-bullet
-          '(("-" . "+") ("+" . "*") ("*" . "-")))
+          '(("-" . "*") ("*" . "+") ("+" . "-")))
+    (setq org-superstar-item-bullet-alist
+          '((?- . ?-)
+            (?* . ?•)
+            (?+ . ?▸)))
     (setq org-goto-auto-isearch nil)
     (setq org-startup-indented t))
     ;; (org-babel-do-load-languages
