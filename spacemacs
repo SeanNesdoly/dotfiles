@@ -535,8 +535,8 @@ before packages are loaded."
           '(("-" . "*") ("*" . "+") ("+" . "-")))
     (setq org-superstar-item-bullet-alist
           '((?- . ?-)
-            (?* . ?•)
-            (?+ . ?▸)))
+            (?* . ?*)
+            (?+ . ?+))) ;; Alternative for last 2: (?* . ?•) "\n" (?+ . ?▸)))
     (setq org-goto-auto-isearch nil)
     (setq org-startup-indented t))
     ;; (org-babel-do-load-languages
