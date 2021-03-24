@@ -6,6 +6,7 @@
 "colorscheme wombat256i  " Vim's colorscheme. other options: molokai, solarized, wombat
 set wildmenu            " visual autocomplete for the command menu
 set showmatch 	        " highlight matching [{()}]
+set ruler               " show line & column number
 
 " Text-processing settings
 syntax enable           " enable syntax processing
