@@ -514,9 +514,9 @@ before packages are loaded."
   (add-hook 'text-mode-hook 'auto-fill-mode)
 
   ;; Activate column indicator
-  (add-hook 'prog-mode-hook 'turn-on-fci-mode)
-  (add-hook 'text-mode-hook 'turn-on-fci-mode)
-  (add-hook 'org-mode-hook 'turn-off-fci-mode)
+  (add-hook 'prog-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
+  (add-hook 'text-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
+  (add-hook 'org-mode-hook 'spacemacs/toggle-fill-column-indicator-off)
 
   ;; Break lines
   ;; 2019-06-05: this seems to break auto-indentation of plain lists in org mode
