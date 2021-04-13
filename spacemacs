@@ -595,13 +595,18 @@ before packages are loaded."
     ;;    (sql . t)))
     ;; )
 
-  ;; Exporting org files to pdf with bibtex citations
+
+
+  ;; Configure build process for exporting org files to PDF via 'pdflatex'.
+  ;; Supports BibTeX citations, nomenclature ('nomencl'), and syntax
+  ;; highlighting via the LaTeX 'minted' package (depends on the backend Python
+  ;; package 'Pygments', installable via pip).
   (setq org-latex-pdf-process
-        '("pdflatex -interaction nonstopmode -output-directory %o %f"
+        '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
           "bibtex %b"
           "makeindex %b.nlo -s nomencl.ist -o %b.nls"
-          "pdflatex -interaction nonstopmode -output-directory %o %f"
-          "pdflatex -interaction nonstopmode -output-directory %o %f"))
+          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
   ;; Bibtex defaults
   (setq org-ref-default-bibliography '("~/bibliography/Mendeley/library.bib")
@@ -610,6 +615,10 @@ before packages are loaded."
   (setq bibtex-completion-bibliography "~/bibliography/Mendeley/library.bib"
         bibtex-completion-library-path "~/bibliography/bibtex-pdfs")
 
+  ;; Syntax highlighting with the LaTeX package 'minted', which uses the Python
+  ;; backend 'Pygments'.
+  (setq org-latex-listings 'minted
+        org-latex-packages-alist '(("" "minted")))
   ;; Open pdf with system pdf viewer (works on mac)
   ;; (setq bibtex-completion-pdf-open-function
   ;;       (lambda (fpath)
