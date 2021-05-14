@@ -562,12 +562,6 @@ before packages are loaded."
   (add-hook 'text-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
   (add-hook 'org-mode-hook 'spacemacs/toggle-fill-column-indicator-off)
 
-  ;; Break lines
-  ;; 2019-06-05: this seems to break auto-indentation of plain lists in org mode
-  ;; (setq-default
-  ;;  fill-column 80
-  ;;  auto-fill-function 'do-auto-fill)
-
   ;; Show whitespace in makefiles
   (add-hook 'makefile-mode-hook 'whitespace-mode)
 
