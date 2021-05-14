@@ -577,19 +577,6 @@ before packages are loaded."
             (?+ . ?+))) ;; Alternative for last 2: (?* . ?•) "\n" (?+ . ?▸)))
     (setq org-goto-auto-isearch nil)
     (setq org-startup-indented t))
-    ;; (org-babel-do-load-languages
-    ;;   'org-babel-load-languages
-    ;;   '((R . t)
-    ;;    (python . t)
-    ;;    (java . t)
-    ;;    (dot . t)
-    ;;    (emacs-lisp . t)
-    ;;    (gnuplot . t)
-    ;;    (shell . t)
-    ;;    (sql . t)))
-    ;; )
-
-
 
   ;; Configure build process for exporting org files to PDF via 'pdflatex'.
   ;; Supports BibTeX citations, nomenclature ('nomencl'), and syntax
@@ -613,6 +600,22 @@ before packages are loaded."
   ;; backend 'Pygments'.
   (setq org-latex-listings 'minted
         org-latex-packages-alist '(("" "minted")))
+
+  ;; (add-to-list 'load-path "~/.emacs.d/elpa/26.3/develop/org-plus-contrib-20200727/ob-julia.el")
+  ;; (org-babel-do-load-languages
+  ;;   'org-babel-load-languages
+  ;;   '((julia . t)
+  ;;     (python . t)
+  ;;     (R . t)
+  ;;     (java . t)))
+  ;; (matlab . t)
+  ;; (haskell . t)
+  ;; (sql . t)
+  ;; (sh . t)
+  ;; (latex . t)
+  ;; (awk . t)
+  ;; (sed . t)))
+
   ;; Open pdf with system pdf viewer (works on mac)
   ;; (setq bibtex-completion-pdf-open-function
   ;;       (lambda (fpath)
