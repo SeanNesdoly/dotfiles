@@ -629,6 +629,9 @@ before packages are loaded."
 
   ;; kill buffers that were opened while browsing directories with ranger
   (setq ranger-cleanup-eagerly t)
+
+  ;; Max length for the summary line of git commits (creates a visual reminder)
+  (setq git-commit-summary-max-length 50)
 )
 
 (defun dotspacemacs/emacs-custom-settings ()
@@ -641,7 +644,6 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(git-commit-summary-max-length 50)
  '(helm-external-programs-associations (quote (("org" . "open"))))
  '(org-agenda-files
    (quote
