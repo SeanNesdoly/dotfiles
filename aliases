@@ -11,6 +11,9 @@ alias ll="ls -lF"
 alias g="git"
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+# Correct previous console commands with 'The Fuck' utility
+eval $(thefuck --alias)
+
 # Always enable colored `grep` output
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'

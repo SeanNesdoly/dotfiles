@@ -8,9 +8,6 @@
 # Prevent file clobbering
 set -o noclobber
 
-# Corrects previous console commands
-#eval "$(thefuck --alias)"
-
 # Complete after man
 complete -cf man
 
@@ -37,11 +34,12 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # Setting the prompt. Default prompt: \h:\W \u\$
 export PS1="$C_LIGHTGREEN\t$C_DEFAULT:$C_LIGHTPURPLE\u@$C_LIGHTBLUE\W$C_DEFAULT\$ "
 
-# Set the `PATH` environment variable
-PATH="/Applications/SWI-Prolog.app/Contents/MacOS:${PATH}" # swipl executable (Prolog)
-PATH="/usr/local/miniconda3/bin:${PATH}" # miniconda bin
-PATH="/usr/local/share/ViennaRNA/bin:${PATH}" # ViennaRNA
-PATH="/Users/sean/Downloads/software/tmhmm-2.0c/bin:${PATH}" # TMHMM2.0
+# Append to the PATH environment variable
+PATH="/Applications/SWI-Prolog.app/Contents/MacOS:$PATH" # swipl executable (Prolog)
+PATH="/usr/local/miniconda3/bin:$PATH" # miniconda
+PATH="/usr/local/share/ViennaRNA/bin:$PATH" # ViennaRNA
+PATH="$HOME/Downloads/software/tmhmm-2.0c/bin:$PATH" # TMHMM2.0
+PATH="$HOME/.local/share/gem/ruby/3.0.0/bin/:$PATH" # Ruby gems
 export PATH
 
 # Set private environment variables
