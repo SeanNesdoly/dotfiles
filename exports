@@ -25,3 +25,9 @@ export LESS_TERMCAP_se=$(printf '\e[0m') # leave standout mode
 export LESS_TERMCAP_so=$(printf '\e[01;33m') # enter standout mode - yellow
 export LESS_TERMCAP_ue=$(printf '\e[0m') # leave underline mode
 export LESS_TERMCAP_us=$(printf '\e[04;36m') # enter underline mode - cyan
+
+#--------------------------------------------------
+# Append to PATH variable
+#--------------------------------------------------
+# Ruby gems
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin/:$PATH"
