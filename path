@@ -1,0 +1,36 @@
+# ~/.path: Specify the PATH environment variable to tell unix where to look for
+# executables; we append to it to retain its current value.
+#
+# On macOS with the Bash shell, this should be sourced from ~/.bash_profile
+# instead of ~/.bashrc to avoid duplicating path values in tmux sessions (I
+# think, anyways).
+#
+# To give an executable precedence in the PATH hierarchy, add its value to the
+# start of the string like so: PATH="/path/to/program:$PATH"
+#
+# Sean Nesdoly
+# 2021-11-10
+
+# Add GNU core, find, *grep, & sed utilities as a prefix, as the macOS versions
+# are outdated
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
+PATH="$(brew --prefix grep)/libexec/gnubin:$PATH"
+PATH="$(brew --prefix gsed)/libexec/gnubin:$PATH"
+
+# Java
+PATH="$PATH:/usr/local/opt/openjdk/bin"
+
+# ViennaRNA
+PATH="$PATH:/usr/local/share/ViennaRNA/bin"
+
+# TMHMM2.0
+PATH="$PATH:$HOME/Downloads/software/tmhmm-2.0c/bin"
+
+# Ruby gems
+PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin/"
+
+# Fast Length Adjustment of Short Reads
+PATH="$PATH:$HOME/bbme/thesis/libs/FLASH-1.2.11"
+
+export PATH
