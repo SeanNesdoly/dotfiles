@@ -9,8 +9,9 @@ set showmatch 	        " highlight matching [{()}]
 set ruler               " show line & column number
 
 " Text-processing settings
-syntax enable           " enable syntax processing
-set spelllang=en_ca     " canadian spellchecking
+syntax enable                  " enable syntax processing
+set backspace=indent,eol,start " make 'delete' key work in insert mode
+set spelllang=en_ca            " canadian spellchecking
 
 " Tab settings
 set tabstop=4       " number of spaces a tab counts for
