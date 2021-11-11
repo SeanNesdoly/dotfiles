@@ -26,11 +26,6 @@ C_LIGHTBLUE="\[\033[1;34m\]"
 C_DEFAULT="\[\033[m\]"
 C_LIGHTGREEN="\[\033[1;32m\]"
 
-# Colour definition for ls output
-export CLICOLOR=1
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-#export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
-
 # Setting the prompt. Default prompt: \h:\W \u\$
 export PS1="$C_LIGHTGREEN\t$C_DEFAULT:$C_LIGHTPURPLE\u@$C_LIGHTBLUE\W$C_DEFAULT\$ "
 
