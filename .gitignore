@@ -1,2 +1,5 @@
 # Ignore bashdot template files that have been rendered with secret information
 **/*.rendered
+
+# May contain secrets
+private
