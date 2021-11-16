@@ -562,6 +562,9 @@ before packages are loaded."
   (add-hook 'text-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
   (add-hook 'org-mode-hook 'spacemacs/toggle-fill-column-indicator-off)
 
+  ;; Set width of first column in helm-mini to the longest buffer name found
+  (setq helm-buffer-max-length nil)
+
   ;; Show whitespace in makefiles
   (add-hook 'makefile-mode-hook 'whitespace-mode)
 
