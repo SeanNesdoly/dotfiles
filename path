@@ -11,10 +11,10 @@
 # Sean Nesdoly
 # 2021-11-10
 
-# Add GNU core, find, *grep, & sed utilities as a prefix, as the macOS versions
-# are outdated
+# Add GNU utilities as a prefix of PATH, as the macOS versions are outdated
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
+PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 PATH="$(brew --prefix grep)/libexec/gnubin:$PATH"
 PATH="$(brew --prefix gsed)/libexec/gnubin:$PATH"
 
