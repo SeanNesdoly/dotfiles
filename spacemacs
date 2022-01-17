@@ -628,7 +628,7 @@ before packages are loaded."
   (setq neo-theme 'nerd)
 
   ;; Set aspell as the external spell-checking program
-  (setq ispell-program-name "/usr/local/bin/aspell")
+  (setq ispell-program-name "/opt/homebrew/bin/aspell")
 
   ;; Run flyspell with aspell (instead of ispell)
   (setq ispell-list-command "list")
