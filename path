@@ -11,15 +11,18 @@
 # Sean Nesdoly
 # 2021-11-10
 
+# arm64 version of homebrew for Apple M1 silicon chips
+# PATH="$(/opt/homebrew/bin/brew shellenv):$PATH"
+
 # Add GNU utilities as a prefix of PATH, as the macOS versions are outdated
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
-PATH="$(brew --prefix gnu-tar)/libexec/gnubin:$PATH"
-PATH="$(brew --prefix grep)/libexec/gnubin:$PATH"
-PATH="$(brew --prefix gsed)/libexec/gnubin:$PATH"
+PATH="$(arch -arm64 brew --prefix coreutils)/libexec/gnubin:$PATH"
+PATH="$(arch -arm64 brew --prefix findutils)/libexec/gnubin:$PATH"
+PATH="$(arch -arm64 brew --prefix gnu-tar)/libexec/gnubin:$PATH"
+PATH="$(arch -arm64 brew --prefix grep)/libexec/gnubin:$PATH"
+PATH="$(arch -arm64 brew --prefix gsed)/libexec/gnubin:$PATH"
 
 # Java
-PATH="$PATH:/usr/local/opt/openjdk/bin"
+PATH="$PATH:/opt/homebrew/opt/openjdk/bin"
 
 # ViennaRNA
 PATH="$PATH:/usr/local/share/ViennaRNA/bin"
