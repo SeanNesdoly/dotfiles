@@ -553,16 +553,20 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (setq-default tab-width 4)
 
-  ;; Activate auto-fill-mode to automatically break lines
   ;; Display relative line numbers in programming & org modes
   (setq display-line-numbers-type 'relative)
   (add-hook 'prog-mode-hook 'display-line-numbers-mode )
   (add-hook 'org-mode-hook 'display-line-numbers-mode )
 
+  ;; Define column beyond which text is automatically wrapped. Some modes
+  ;; override this value based on convention (e.g. Python is 79).
+  (setq-default fill-column 80)
+
+  ;; Automatically break lines
   (add-hook 'prog-mode-hook 'auto-fill-mode)
   (add-hook 'text-mode-hook 'auto-fill-mode)
 
-  ;; Activate column indicator
+  ;; Activate column indicator for programming & text modes, but not org-mode
   (add-hook 'prog-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
   (add-hook 'text-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
   (add-hook 'org-mode-hook 'spacemacs/toggle-fill-column-indicator-off)
