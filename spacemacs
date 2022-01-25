@@ -554,6 +554,11 @@ before packages are loaded."
   (setq-default tab-width 4)
 
   ;; Activate auto-fill-mode to automatically break lines
+  ;; Display relative line numbers in programming & org modes
+  (setq display-line-numbers-type 'relative)
+  (add-hook 'prog-mode-hook 'display-line-numbers-mode )
+  (add-hook 'org-mode-hook 'display-line-numbers-mode )
+
   (add-hook 'prog-mode-hook 'auto-fill-mode)
   (add-hook 'text-mode-hook 'auto-fill-mode)
 
