@@ -646,6 +646,9 @@ before packages are loaded."
   ;; kill buffers that were opened while browsing directories with ranger
   (setq ranger-cleanup-eagerly t)
 
+  ;; Magit: set explicit path to the arm64 version of git
+  (setq magit-git-executable "/opt/homebrew/bin/git")
+
   ;; Max length for the summary line of git commits (creates a visual reminder)
   (setq git-commit-summary-max-length 50)
 )
