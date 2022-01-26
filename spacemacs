@@ -577,10 +577,11 @@ before packages are loaded."
   ;; Show whitespace in makefiles
   (add-hook 'makefile-mode-hook 'whitespace-mode)
 
-  ;; org mode configurations
+  ;; org-mode configurations
   (with-eval-after-load 'org
-    (setq org-ellipsis "⤵")
     (setq org-user-mail-address "srnesdoly@gmail.com")
+    (setq org-ellipsis "⤵")
+    (setq org-pretty-entities t)
     (setq org-list-demote-modify-bullet
           '(("-" . "*") ("*" . "+") ("+" . "-")))
     (setq org-superstar-item-bullet-alist
