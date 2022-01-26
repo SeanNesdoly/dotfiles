@@ -42,11 +42,24 @@ This function should only modify configuration layer settings."
      (spell-checking :variables spell-checking-enable-by-default nil)
      syntax-checking
      (org :variables
+          org-startup-indented t
+          org-goto-auto-isearch nil
+          org-pretty-entities t
           org-hide-emphasis-markers t
           org-enable-appear-support t
+          org-ellipsis "⤵"
+          org-list-demote-modify-bullet '(("-" . "*") ("*" . "+") ("+" . "-"))
+          org-superstar-item-bullet-alist
+          '((?- . ?-)
+            (?* . ?*)
+            (?+ . ?+))
           org-enable-github-support t
+          org-enable-jira-support t
           org-enable-hugo-support t
-          org-enable-bootstrap-support t)
+          org-enable-bootstrap-support t
+          org-pomodoro-clock-break t
+          org-user-mail-address "srnesdoly@gmail.com"
+          org-agenda-files (list "~/Dropbox/org/agendas/"))
      latex
      bibtex
      ;; <<Coding Tools>>
@@ -578,20 +591,6 @@ before packages are loaded."
 
   ;; Show whitespace in makefiles
   (add-hook 'makefile-mode-hook 'whitespace-mode)
-
-  ;; org-mode configurations
-  (with-eval-after-load 'org
-    (setq org-user-mail-address "srnesdoly@gmail.com")
-    (setq org-ellipsis "⤵")
-    (setq org-pretty-entities t)
-    (setq org-list-demote-modify-bullet
-          '(("-" . "*") ("*" . "+") ("+" . "-")))
-    (setq org-superstar-item-bullet-alist
-          '((?- . ?-)
-            (?* . ?*)
-            (?+ . ?+))) ;; Alternative for last 2: (?* . ?•) "\n" (?+ . ?▸)))
-    (setq org-goto-auto-isearch nil)
-    (setq org-startup-indented t))
 
   ;; Configure build process for exporting org files to PDF via 'pdflatex'.
   ;; Supports BibTeX citations, nomenclature ('nomencl'), and syntax
