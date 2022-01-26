@@ -42,6 +42,8 @@ This function should only modify configuration layer settings."
      (spell-checking :variables spell-checking-enable-by-default nil)
      syntax-checking
      (org :variables
+          org-hide-emphasis-markers t
+          org-enable-appear-support t
           org-enable-github-support t
           org-enable-hugo-support t
           org-enable-bootstrap-support t)
