@@ -43,6 +43,8 @@ This function should only modify configuration layer settings."
      syntax-checking
      (org :variables
           org-startup-indented t
+          org-startup-with-inline-images t
+          org-image-actual-width '(600)
           org-goto-auto-isearch nil
           org-pretty-entities t
           org-hide-emphasis-markers t
