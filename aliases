@@ -12,6 +12,7 @@ alias cp="cp -i"
 alias ls="ls --color"
 alias ll="ls -lF"
 alias g="git"
+alias tree="tree -C" # add colours
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Homebrew running under Apple's arm64 architecture (NOT with Rosetta 2)
