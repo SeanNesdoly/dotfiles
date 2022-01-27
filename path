@@ -21,6 +21,9 @@ PATH="$(arch -arm64 brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 PATH="$(arch -arm64 brew --prefix grep)/libexec/gnubin:$PATH"
 PATH="$(arch -arm64 brew --prefix gsed)/libexec/gnubin:$PATH"
 
+# Python
+PATH="$(arch -arm64 brew --prefix python)/libexec/bin:$PATH"
+
 # Java
 PATH="$PATH:/opt/homebrew/opt/openjdk/bin"
 
