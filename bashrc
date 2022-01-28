@@ -34,3 +34,8 @@ if [ -r ~/.private ]
 then
     source ~/.private
 fi
+
+# Configure 'pyenv' for the Bash shell
+if command -v $HOME/.pyenv/bin/pyenv > /dev/null; then
+    eval "$(pyenv init -)"
+fi
