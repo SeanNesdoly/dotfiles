@@ -1,12 +1,19 @@
 # ~/.path: Specify the PATH environment variable to tell unix where to look for
-# executables; we append to it to retain its current value.
+# executables; we append/prepend to it to retain its current value.
 #
-# On macOS with the Bash shell, this should be sourced from ~/.bash_profile
-# instead of ~/.bashrc to avoid duplicating path values in tmux sessions (I
-# think, anyways).
+# On macOS with the Bash shell, this should be sourced from ~/.bash_profile to
+# ensure it is picked up in tmux sesssions (which execute login shells).
 #
 # To give an executable precedence in the PATH hierarchy, add its value to the
-# start of the string like so: PATH="/path/to/program:$PATH"
+# start of the string, like so: PATH="/path/to/program:$PATH"
+#
+# To test for duplicates in your $PATH:
+#   echo $PATH | sed 's/:/\n/g' | sort | uniq -c
+#
+# To check if we are in a tmux session:
+#   if [[ -z $TMUX ]]; then
+#       echo "We are in tmux!"
+#   fi
 #
 # Sean Nesdoly
 # 2021-11-10
@@ -15,11 +22,11 @@
 # PATH="$(/opt/homebrew/bin/brew shellenv):$PATH"
 
 # Add GNU utilities as a prefix of PATH, as the macOS versions are outdated
-PATH="$(arch -arm64 brew --prefix coreutils)/libexec/gnubin:$PATH"
-PATH="$(arch -arm64 brew --prefix findutils)/libexec/gnubin:$PATH"
+PATH="$(arch -arm64 brew --prefix gsed)/libexec/gnubin:$PATH"
 PATH="$(arch -arm64 brew --prefix gnu-tar)/libexec/gnubin:$PATH"
 PATH="$(arch -arm64 brew --prefix grep)/libexec/gnubin:$PATH"
-PATH="$(arch -arm64 brew --prefix gsed)/libexec/gnubin:$PATH"
+PATH="$(arch -arm64 brew --prefix findutils)/libexec/gnubin:$PATH"
+PATH="$(arch -arm64 brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # Python
 PATH="$(arch -arm64 brew --prefix python)/libexec/bin:$PATH"

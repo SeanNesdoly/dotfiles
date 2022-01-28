@@ -5,7 +5,13 @@
 # Sean Nesdoly
 # 2017-08-15
 
-for file in ~/.{path,exports,aliases,bashrc}; do
+# Prevent duplication of PATH elements in tmux sessions
+if [ -f /etc/profile ]; then
+    PATH=""
+    source /etc/profile
+fi
+
+for file in "${HOME}"/.{bashrc,path,exports,aliases}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
