@@ -8,6 +8,8 @@ colorscheme desert      " https://vimcolorschemes.com/
 set wildmenu            " visual autocomplete for the command menu
 set showmatch 	        " highlight matching [{()}]
 set ruler               " show line & column number
+set relativenumber      " show relative line numbers
+set number              " show actual line number for current line
 
 " Text-processing settings
 syntax enable                  " enable syntax processing
