@@ -3,7 +3,8 @@
 " Date created: 2017-01-29
 
 " UI configurations
-"colorscheme wombat256i  " Vim's colorscheme. other options: molokai, solarized, wombat
+set background=dark
+colorscheme desert      " https://vimcolorschemes.com/
 set wildmenu            " visual autocomplete for the command menu
 set showmatch 	        " highlight matching [{()}]
 set ruler               " show line & column number
