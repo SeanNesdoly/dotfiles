@@ -3,34 +3,34 @@
 " Date created: 2017-01-29
 
 " UI configurations
-set background=dark
-colorscheme desert      " https://vimcolorschemes.com/
-set wildmenu            " visual autocomplete for the command menu
-set showmatch 	        " highlight matching [{()}]
-set ruler               " show line & column number
-set relativenumber      " show relative line numbers
-set number              " show actual line number for current line
+set background=dark            " high-contrast background, for the eyes
+colorscheme desert             " https://vimcolorschemes.com/
+set wildmenu                   " visual autocomplete for the command menu
+set hlsearch                   " highlight search matches
+set showmatch                  " highlight matching [{()}]
+set ruler                      " show line & column number
+set relativenumber             " show relative line numbers
+set number                     " show actual line number for current line
+set cursorline                 " highlight the current line
 
 " Text-processing settings
 syntax enable                  " enable syntax processing
 set backspace=indent,eol,start " make 'delete' key work in insert mode
-set spelllang=en_ca            " canadian spellchecking
+set spelllang=en_ca            " Canadian spellchecking
 
 " Tab settings
-set tabstop=4       " number of spaces a tab counts for
-set softtabstop=4   " sets the number of columns for a tab
-set shiftwidth=4    " indents will have a width of 4
-set expandtab       " tabs are spaces!
+set tabstop=4                  " number of spaces a tab counts for
+set softtabstop=4              " set the number of columns for a tab
+set shiftwidth=4               " width of indents, mostly for >> and <<
+set expandtab                  " replace tabs with spaces!
+set smarttab                   " smart tab handling for indenting
 
 " Editor settings
-set esckeys             " map missed escape sequences (enables keypad keys)
-set ignorecase          " case insensitive searching
-set smartcase           " but become sensitive if you type uppercase characters
-set autoindent          " autoindents paragraphs
-set smartindent         " (mostly) indents files correctly
-set smarttab            " smart tab handling for indenting
-set tw=80               " textwidth = 80 characters
 "set colorcolumn=80	    " highlight characters in columns > 80
+set esckeys                    " map missed escape sequences (enables keypad keys)
+set ignorecase                 " case-insensitive searching
+set smartcase                  " case-sensitive searching with uppercase characters
+set autoindent                 " autoindent paragraphs
+set smartindent                " (mostly) indent files correctly
+set textwidth=80               " treat 80 characters as the standard line length
 
-" Search Settings
-set hlsearch " highlight search matches
