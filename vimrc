@@ -19,6 +19,7 @@ set spelllang=en_ca            " Canadian spellchecking
 
 " Highlight search hits
 set hlsearch                   " highlight search matches
+set incsearch                  " show hits while typing a pattern
 set ignorecase                 " case-insensitive searching
 set smartcase                  " case-sensitive searching with uppercase characters
 
