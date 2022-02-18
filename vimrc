@@ -41,6 +41,7 @@ set smartindent                " (mostly) indent files correctly
 set textwidth=80               " treat 80 characters as the standard line length
 set linebreak                  " break lines, intelligently
 "set colorcolumn=80            " highlight characters in columns > 80
+set nowrap                     " to avoid confusion, do not visually wrap lines
 
 " ------------------------- Custom leader key mappings -------------------------
 " Primary leader key: space (akin to spacemacs)
