@@ -40,3 +40,13 @@ set textwidth=80               " treat 80 characters as the standard line length
 set linebreak                  " break lines, intelligently
 "set colorcolumn=80            " highlight characters in columns > 80
 
+" ------------------------- Custom leader key mappings -------------------------
+" Primary leader key: space (akin to spacemacs)
+let mapleader = "\<Space>"
+
+" List buffers
+nnoremap <Leader>bb :ls<CR>:b
+
+" Switch to the buffer that was last used
+nnoremap <Leader><Tab> :e#<CR>
+
