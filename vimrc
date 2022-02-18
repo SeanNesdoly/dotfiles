@@ -5,6 +5,8 @@
 " UI configurations
 set background=dark            " high-contrast background, for the eyes
 colorscheme desert             " https://vimcolorschemes.com/
+set showmode                   " show when in Insert, Replace, or Visual modes
+set showcmd                    " show partial commands on last line of screen
 set ruler                      " show line & column number
 set relativenumber             " show relative line numbers
 set number                     " show actual line number for current line
