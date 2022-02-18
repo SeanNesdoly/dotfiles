@@ -11,8 +11,11 @@ set -o noclobber
 # Complete after man
 complete -cf man
 
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
+# @TODO: Add tab completion for SSH hostnames in ~/.ssh/config, ignoring wildcards
+# [ -e "$HOME/.ssh/config" ] && \
+#     complete -o "default" -o "nospace" -W \
+#     "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" \
+#     scp sftp ssh;
 
 # Line wrap on window resize
 shopt -s checkwinsize
@@ -38,4 +41,18 @@ fi
 # Configure 'pyenv' for the Bash shell
 if command -v $HOME/.pyenv/bin/pyenv > /dev/null; then
     eval "$(pyenv init -)"
+fi
+
+# github.com/junegunn/fzf: command-line fuzzy finder
+if [ -f ~/.fzf.bash ]; then
+    # shellcheck source=../.fzf.bash
+    source ~/.fzf.bash
+
+    # Set fd (https://github.com/sharkdp/fd) as the default source for fzf
+    if command -v fd > /dev/null; then
+        export FZF_DEFAULT_COMMAND='fd --type f'
+
+        # Use fd for CTRL-T as well
+        export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+    fi
 fi
