@@ -50,3 +50,22 @@ nnoremap <Leader>bb :ls<CR>:b
 " Switch to the buffer that was last used
 nnoremap <Leader><Tab> :e#<CR>
 
+" ------------- Vim Plugin Manager (github.com/junegunn/vim-plug) --------------
+" PlugInstall [name ...]
+" PlugUpdate [name ...]
+" PlugStatus
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+Plug 'junegunn/vim-easy-align'
+call plug#end()
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
