@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: figure
+# key: fig_
+# --
+#+caption[${1:short caption}]: ${2:long caption}
+#+attr_latex: :placement [H]
+#+label: fig:${3:label}$0

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: fancyhdr
+# key: <fancy
+# --
+#+latex: \pagestyle{fancy}
+#+latex: \lhead{\today}
+#+latex: \chead{Sean Nesdoly}
+$0

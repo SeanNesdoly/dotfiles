@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: cols
+# key: cols
+# --
+#+latex: \begin{multicols}{2}
+$0
+#+latex: \end{multicols}

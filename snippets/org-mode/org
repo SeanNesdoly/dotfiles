@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: org-header
+# key: org
+# --
+#+title: ${1: }
+#+subtitle: ${2: }
+#+author: ${3:Sean Nesdoly}
+#+date: ${4:yyyy}-${5:mm}-${6:dd}
+#+setupfile: ~/dotfiles/org-mode/latex.org
+$0
