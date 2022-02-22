@@ -1,0 +1,28 @@
+#+EMAIL: srnesdoly@gmail.com
+#+OPTIONS: toc:nil H:3 num:2 tags:not-in-toc
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper]
+
+#+LATEX_HEADER: \usepackage[margin=25mm]{geometry}
+#+LATEX_HEADER: \usepackage{parskip}
+#+LATEX_HEADER: \usepackage[labelfont=bf,sc]{caption}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{multicol}
+#+LATEX_HEADER: \usepackage{multirow}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \usepackage{setspace}
+
+#+LATEX_HEADER: \usepackage{titling}
+#+LATEX_HEADER: \setlength{\droptitle}{-20mm}
+
+#+LATEX_HEADER: \usepackage[yyyymmdd]{datetime}
+#+LATEX_HEADER: \renewcommand{\dateseparator}{--}
+
+#+LATEX_HEADER: \usepackage[svgnames,hyperref]{xcolor}
+
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=DarkBlue, citecolor=blue}
+
+#+LATEX_HEADER: \usepackage[super, sort&compress, numbers]{natbib}
+#+LATEX_HEADER: \renewcommand{\bibnumfmt}[1]{#1.}
+#+LATEX_HEADER: \usepackage[nottoc]{tocbibind}
