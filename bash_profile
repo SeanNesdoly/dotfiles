@@ -12,7 +12,7 @@ if [ -f /etc/profile ]; then
 fi
 
 # Configure 'pyenv' for the Bash shell
-if command -v $HOME/.pyenv/bin/pyenv > /dev/null; then
+if command -v "$HOME"/.pyenv/bin/pyenv > /dev/null; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init --path)"

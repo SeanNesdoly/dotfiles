@@ -33,13 +33,10 @@ C_LIGHTGREEN="\[\033[1;32m\]"
 export PS1="$C_LIGHTGREEN\t$C_DEFAULT:$C_LIGHTPURPLE\u@$C_LIGHTBLUE\W$C_DEFAULT\$ "
 
 # Set private environment variables
-if [ -r ~/.private ]
-then
-    source ~/.private
-fi
+[ -r ~/.private ] && source ~/.private
 
 # Configure 'pyenv' for the Bash shell
-if command -v $HOME/.pyenv/bin/pyenv > /dev/null; then
+if command -v "$HOME"/.pyenv/bin/pyenv > /dev/null; then
     eval "$(pyenv init -)"
 fi
 

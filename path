@@ -1,8 +1,10 @@
-# ~/.path: Specify the PATH environment variable to tell unix where to look for
+#!/bin/bash
+#
+# ~/.path: Specify the PATH environment variable to tell Unix where to look for
 # executables; we append/prepend to it to retain its current value.
 #
 # On macOS with the Bash shell, this should be sourced from ~/.bash_profile to
-# ensure it is picked up in tmux sesssions (which execute login shells).
+# ensure it is picked up in tmux sessions (which execute login shells).
 #
 # To give an executable precedence in the PATH hierarchy, add its value to the
 # start of the string, like so: PATH="/path/to/program:$PATH"
