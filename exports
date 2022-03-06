@@ -11,8 +11,12 @@ export EDITOR='vim'
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth'
 
-# Configure java
-export JAVA_HOME=$(/usr/libexec/java_home)
+# Configure java.
+# The precedence of java executables in PATH does not always reflect which JVM
+# is selected to run; instead, this seems to be controlled by
+# '/usr/libexec/java_home'.
+[ -x /usr/libexec/java_home ] && JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X'

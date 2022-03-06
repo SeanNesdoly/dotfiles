@@ -20,21 +20,42 @@
 # Sean Nesdoly
 # 2021-11-10
 
-# arm64 version of homebrew for Apple M1 silicon chips
-# PATH="$(/opt/homebrew/bin/brew shellenv):$PATH"
+# Configure Homebrew, and essential packages installed by it, for the
+# appropriate instruction set architecture (x86_64 or arm64).
+if [ -x /opt/homebrew/bin/brew ]; then
+    # Configure Homebrew for the arm64 architecture
+    eval "$(arch -arm64 /opt/homebrew/bin/brew shellenv)"
 
-# Add GNU utilities as a prefix of PATH, as the macOS versions are outdated
-PATH="$(arch -arm64 brew --prefix gsed)/libexec/gnubin:$PATH"
-PATH="$(arch -arm64 brew --prefix gnu-tar)/libexec/gnubin:$PATH"
-PATH="$(arch -arm64 brew --prefix grep)/libexec/gnubin:$PATH"
-PATH="$(arch -arm64 brew --prefix findutils)/libexec/gnubin:$PATH"
-PATH="$(arch -arm64 brew --prefix coreutils)/libexec/gnubin:$PATH"
+    # Add GNU utilities as a prefix of PATH, as the macOS versions are outdated
+    PATH="$(arch -arm64 brew --prefix gsed)/libexec/gnubin:$PATH"
+    PATH="$(arch -arm64 brew --prefix gnu-tar)/libexec/gnubin:$PATH"
+    PATH="$(arch -arm64 brew --prefix grep)/libexec/gnubin:$PATH"
+    PATH="$(arch -arm64 brew --prefix findutils)/libexec/gnubin:$PATH"
+    PATH="$(arch -arm64 brew --prefix coreutils)/libexec/gnubin:$PATH"
 
-# Python
-PATH="$(arch -arm64 brew --prefix python)/libexec/bin:$PATH"
+    # Python. Override the system default of '/usr/bin/python' (2.7.18).
+    PATH="$(arch -arm64 brew --prefix python)/libexec/bin:$PATH"
 
-# Java
-PATH="$PATH:/opt/homebrew/opt/openjdk/bin"
+    # Java
+    PATH="$PATH:$(arch -arm64 brew --prefix java)/bin"
+elif [ -x /usr/local/bin/brew ]; then
+    # Configure Homebrew for the x86_64 architecture
+    eval "$(arch -x86_64 /usr/local/bin/brew shellenv)"
+
+    # Add GNU utilities as a prefix of PATH, as the macOS versions are outdated
+    PATH="$(arch -x86_64 brew --prefix gsed)/libexec/gnubin:$PATH"
+    PATH="$(arch -x86_64 brew --prefix gnu-tar)/libexec/gnubin:$PATH"
+    PATH="$(arch -x86_64 brew --prefix grep)/libexec/gnubin:$PATH"
+    PATH="$(arch -x86_64 brew --prefix findutils)/libexec/gnubin:$PATH"
+    PATH="$(arch -x86_64 brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+    # Python. Override the system default of '/usr/bin/python' (2.7.18).
+    PATH="$(arch -x86_64 brew --prefix python)/libexec/bin:$PATH"
+
+    # Java
+    PATH="$PATH:$(arch -x86_64 brew --prefix java)/bin"
+fi
+
 
 # ViennaRNA
 PATH="$PATH:/usr/local/share/ViennaRNA/bin"
