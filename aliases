@@ -11,6 +11,7 @@ alias mv="mv -i"
 alias cp="cp -i"
 alias ls="ls --color"
 alias ll="ls -lF"
+alias less="less -R"
 alias g="git"
 alias tree="tree -C" # add colours
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
