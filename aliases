@@ -15,11 +15,17 @@ alias g="git"
 alias tree="tree -C" # add colours
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+# Run bash explicitly under the arm64 architecture
+[ -x /opt/homebrew/bin/bash ] && \
+    alias armbash="arch -arm64 /opt/homebrew/bin/bash --login";
+
 # Homebrew running under Apple's arm64 architecture (NOT with Rosetta 2)
-alias abrew="arch -arm64 /opt/homebrew/bin/brew"
+[ -x /opt/homebrew/bin/brew ] && \
+    alias abrew="arch -arm64 /opt/homebrew/bin/brew"
 
 # Homebrew running under Intel's x86_64 architecture (via Rosetta 2)
-alias ibrew="arch -x86_64 /usr/local/bin/brew"
+[ -x /usr/local/bin/brew ] && \
+    alias ibrew="arch -x86_64 /usr/local/bin/brew"
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto'
