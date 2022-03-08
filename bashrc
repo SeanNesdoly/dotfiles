@@ -40,10 +40,11 @@ if command -v "$HOME"/.pyenv/bin/pyenv > /dev/null; then
     eval "$(pyenv init -)"
 fi
 
-# github.com/junegunn/fzf: command-line fuzzy finder
-if [ -f ~/.fzf.bash ]; then
+# github.com/junegunn/fzf: command-line fuzzy finder.
+# Run "$(brew --prefix fzf)"/install to create ~/.fzf.* scripts.
+if command -v fzf > /dev/null && [ -f ~/.fzf.bash ]; then
     # shellcheck source=../.fzf.bash
-    source ~/.fzf.bash
+    source "$HOME"/.fzf.bash
 
     # Set fd (https://github.com/sharkdp/fd) as the default source for fzf
     if command -v fd > /dev/null; then
