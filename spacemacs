@@ -42,7 +42,7 @@ This function should only modify configuration layer settings."
      (spell-checking :variables spell-checking-enable-by-default nil)
      syntax-checking
      (org :variables
-          org-startup-indented nil
+          org-startup-indented t
           org-startup-with-inline-images t
           org-image-actual-width '(600)
           org-goto-auto-isearch nil
@@ -599,6 +599,7 @@ before packages are loaded."
   ;; Activate column indicator for programming & text modes, but not org-mode
   (add-hook 'prog-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
   (add-hook 'text-mode-hook 'spacemacs/toggle-fill-column-indicator-on)
+  (add-hook 'org-mode-hook 'spacemacs/toggle-fill-column-indicator-off)
 
   ;; Set width of first column in helm-mini to the longest buffer name found
   (setq helm-buffer-max-length nil)
