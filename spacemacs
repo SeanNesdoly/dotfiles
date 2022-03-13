@@ -692,5 +692,8 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ ;;
+ ;; To customize, see 'M-x customize-face':
+ ;;   https://orgmode.org/worg/org-tutorials/org-appearance.html
+ '(org-document-title ((t (:inherit bold :foreground "#bc6ec5" :underline nil :height 1.0)))))
 )
