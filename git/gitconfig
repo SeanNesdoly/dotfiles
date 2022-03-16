@@ -6,7 +6,7 @@
 	autocrlf = input
 	eol = lf
 [push]
-	default = simple
+	default = nothing
 [color]
 	ui = auto
 [color "branch"]
