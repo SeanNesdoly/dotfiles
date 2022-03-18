@@ -24,3 +24,5 @@
     untracked = cyan
 [status]
 	submoduleSummary = true
+[alias]
+	st = status --short --branch
