@@ -23,14 +23,19 @@ shopt -s checkwinsize
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
-# Colour definitions for shell text
-C_LIGHTPURPLE="\[\033[1;35m\]"
-C_LIGHTBLUE="\[\033[1;34m\]"
-C_DEFAULT="\[\033[m\]"
-C_LIGHTGREEN="\[\033[1;32m\]"
+# Colour codes for shell text with proper ANSI escape codes.
+# Format="\033[38;5;nm" (https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit)
+#   \033[  = Control Sequence Introducer
+#   38;5;  = Prefix denoting support for 256-colour lookup tables
+#   n      = Foreground colour code
+#   m      = Terminating symbol
+RESET="\[\033[0m\]"
+TIME_COLOUR="\[\033[38;5;35m\]"       # #00af5f
+USER_HOST_COLOUR="\[\033[38;5;127m\]" # #af00af
+PWD_COLOUR="\[\033[38;5;32m\]"        # #0087d7
 
 # Setting the prompt. Default prompt: \h:\W \u\$
-export PS1="$C_LIGHTGREEN\t$C_DEFAULT:$C_LIGHTPURPLE\u@$C_LIGHTBLUE\W$C_DEFAULT\$ "
+export PS1="$TIME_COLOUR[\t] $USER_HOST_COLOUR\u@\h $PWD_COLOUR\w\n$RESET\$ "
 
 # Set private environment variables
 [ -r ~/.private ] && source ~/.private
