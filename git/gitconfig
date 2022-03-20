@@ -28,3 +28,6 @@
 	conflictStyle = diff3
 [alias]
 	st = status --short --branch
+	c = commit -v
+	ds = diff --staged
+	bv = branch -vv
