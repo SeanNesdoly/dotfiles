@@ -24,5 +24,7 @@
     untracked = cyan
 [status]
 	submoduleSummary = true
+[merge]
+	conflictStyle = diff3
 [alias]
 	st = status --short --branch
