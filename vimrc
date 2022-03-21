@@ -51,6 +51,30 @@ set nowrap                     " to avoid confusion, do not visually wrap lines
 " Primary leader key: space (akin to spacemacs)
 let mapleader = "\<Space>"
 
+" Split windows, evil-like
+nnoremap <Leader>ws :sp<CR>
+nnoremap <Leader>wS :sp<CR>:wincmd j<CR>
+nnoremap <Leader>wv :vsp<CR>
+nnoremap <Leader>wV :vsp<CR>:wincmd l<CR>
+
+" Window navigation, evil-like
+nnoremap <Leader>wh :wincmd h<CR>
+nnoremap <Leader>wj :wincmd j<CR>
+nnoremap <Leader>wk :wincmd k<CR>
+nnoremap <Leader>wl :wincmd l<CR>
+
+" Window movement, evil-like
+nnoremap <Leader>wH :wincmd H<CR>
+nnoremap <Leader>wJ :wincmd J<CR>
+nnoremap <Leader>wK :wincmd K<CR>
+nnoremap <Leader>wL :wincmd L<CR>
+
+" Close current window
+nnoremap <Leader>wd :close<CR>
+
+" Built-in directory exploration (splits horizontally)
+nnoremap <Leader>ft :Hexplore<CR>
+
 " List buffers
 nnoremap <Leader>bb :ls<CR>:b<Space>
 
