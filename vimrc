@@ -89,6 +89,12 @@ nnoremap <Leader>fm :Marks<CR>
 nnoremap <Leader>fg :GFiles<CR>
 nnoremap <Leader>gs :GFiles?<CR>
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 " ------------- Vim Plugin Manager (github.com/junegunn/vim-plug) --------------
 " vim-plug commands:
 "   PlugInstall [name ...]
@@ -107,8 +113,3 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 call plug#end()
 
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
