@@ -95,6 +95,10 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+" YouCompleteMe
+nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
+
 " ------------- Vim Plugin Manager (github.com/junegunn/vim-plug) --------------
 " vim-plug commands:
 "   PlugInstall [name ...]
@@ -111,5 +115,6 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
