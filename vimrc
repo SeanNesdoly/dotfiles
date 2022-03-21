@@ -81,6 +81,14 @@ nnoremap <Leader>bb :ls<CR>:b<Space>
 " Switch to the buffer that was last used
 nnoremap <Leader><Tab> :e#<CR>
 
+" Find files, buffers, lines, and marks with fzf.vim
+nnoremap <Leader>ff :Files<CR>
+nnoremap <Leader>fb :Buffers<CR>
+nnoremap <Leader>fl :Lines<CR>
+nnoremap <Leader>fm :Marks<CR>
+nnoremap <Leader>fg :GFiles<CR>
+nnoremap <Leader>gs :GFiles?<CR>
+
 " ------------- Vim Plugin Manager (github.com/junegunn/vim-plug) --------------
 " vim-plug commands:
 "   PlugInstall [name ...]
@@ -95,6 +103,7 @@ endif
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 call plug#end()
 
