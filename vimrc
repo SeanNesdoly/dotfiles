@@ -9,16 +9,18 @@ colorscheme desert             " https://vimcolorschemes.com/
 set showmode                   " show when in Insert, Replace, or Visual modes
 set showcmd                    " show partial commands on last line of screen
 set ruler                      " show line & column number
+set laststatus=2               " show status line, even with only 1 window
 set relativenumber             " show relative line numbers
 set number                     " show actual line number for current line
 "set cursorline                 " highlight the current line
+set lazyredraw                 " delay redraw for macros, untyped commands
 
 " -------------------------- Text-processing settings --------------------------
 syntax enable                  " enable syntax processing
 set backspace=indent,eol,start " make 'delete' key work in insert mode
 set esckeys                    " map missed escape sequences (enables keypad keys)
 set encoding=utf8              " UTF-8 character encoding
-set spelllang=en_ca            " Canadian spellchecking
+set spell spelllang=en_ca      " Canadian spellchecking (z=, [s, ]s)
 
 " --------------------------- Highlight search hits ----------------------------
 set hlsearch                   " highlight search matches
@@ -50,7 +52,7 @@ set nowrap                     " to avoid confusion, do not visually wrap lines
 let mapleader = "\<Space>"
 
 " List buffers
-nnoremap <Leader>bb :ls<CR>:b
+nnoremap <Leader>bb :ls<CR>:b<Space>
 
 " Switch to the buffer that was last used
 nnoremap <Leader><Tab> :e#<CR>
