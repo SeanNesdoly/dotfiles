@@ -7,21 +7,41 @@
 " https://vimcolorschemes.com/
 autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark            " high-contrast background, for the eyes
+
+" Highlight current line and toggle it when entering or leaving Insert mode
+set cursorline
+autocmd InsertEnter * setlocal nocursorline
+autocmd InsertLeave * setlocal cursorline
+
+" Display current mode on last line AND by changing cursor style
 set showmode                   " show when in Insert, Replace, or Visual modes
-set showcmd                    " show partial commands on last line of screen
+let &t_SI = "\033[6 q"         " start Insert mode (steady bar, xterm)
+let &t_EI = "\033[2 q"         " end Insert mode (steady block)
+let &t_SR = "\033[4 q"         " REPLACE mode (steady underline)
+
+" Status line, last line
 set ruler                      " show line & column number
 set laststatus=2               " show status line, even with only 1 window
+set showcmd                    " show partial commands on last line
+
+" Line numbers
 set relativenumber             " show relative line numbers
 set number                     " show actual line number for current line
+
 set lazyredraw                 " delay redraw for macros, untyped commands
-set cursorline                 " highlight the current line
 
 " -------------------------- Text-processing settings --------------------------
 syntax enable                  " enable syntax processing
 set backspace=indent,eol,start " make 'delete' key work in insert mode
-set esckeys                    " map missed escape sequences (enables keypad keys)
 set encoding=utf8              " UTF-8 character encoding
 set spell spelllang=en_ca      " Canadian spellchecking (z=, [s, ]s)
+
+" Detect <Esc> sequences with function keys (e.g., arrows) in Insert mode. To
+" quickly detect a single <Esc> sequence in Insert mode, we set 'ttimeoutlen' to
+" >=0 (default -1, unused).
+set esckeys
+set timeoutlen=3000            " Time out on firing mappings
+set ttimeoutlen=10             " Time out on key codes
 
 " --------------------------- Highlight search hits ----------------------------
 set hlsearch                   " highlight search matches
