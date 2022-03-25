@@ -35,7 +35,7 @@ USER_HOST_COLOUR="\[\033[38;5;127m\]" # #af00af
 PWD_COLOUR="\[\033[38;5;32m\]"        # #0087d7
 
 # Setting the prompt. Default prompt: \h:\W \u\$
-export PS1="$TIME_COLOUR[\t] $USER_HOST_COLOUR\u@\h $PWD_COLOUR\w\n$RESET\$ "
+export PS1="$TIME_COLOUR[\t]$USER_HOST_COLOUR\u@\h$RESET:$PWD_COLOUR\w\n$RESET\$ "
 
 # Set private environment variables
 [ -r ~/.private ] && source ~/.private
