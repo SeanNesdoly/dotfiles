@@ -37,6 +37,11 @@ PWD_COLOUR="\[\033[38;5;32m\]"        # #0087d7
 # Setting the prompt. Default prompt: \h:\W \u\$
 export PS1="$TIME_COLOUR[\t]$USER_HOST_COLOUR\u@\h$RESET:$PWD_COLOUR\w\n$RESET\$ "
 
+# Use gruvbox's 256-colour palette to correct colours displayed in vim
+GRUVBOX_COLOURS="$HOME/.vim/plugged/gruvbox/gruvbox_256palette.sh"
+[ -x "$GRUVBOX_COLOURS" ] && source "$GRUVBOX_COLOURS"
+unset GRUVBOX_COLOURS
+
 # Set private environment variables
 [ -r ~/.private ] && source ~/.private
 

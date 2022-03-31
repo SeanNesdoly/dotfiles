@@ -4,7 +4,8 @@
 " ------------------------------------------------------------------------------
 
 " ------------------------------ UI configurations -----------------------------
-" https://vimcolorschemes.com/
+" Colour scheme (https://vimcolorschemes.com/)
+let g:gruvbox_contrast_dark='hard'
 autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark            " high-contrast background, for the eyes
 
