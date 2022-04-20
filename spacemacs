@@ -55,6 +55,7 @@ This function should only modify configuration layer settings."
           '((?- . ?-)
             (?* . ?*)
             (?+ . ?+))
+          org-src-tab-acts-natively nil
           org-enable-github-support t
           org-enable-jira-support t
           org-enable-hugo-support t
