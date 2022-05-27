@@ -18,8 +18,9 @@ export HISTCONTROL='ignoreboth'
 [ -x /usr/libexec/java_home ] && JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME
 
-# Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X'
+# Improve searching, squash consecutive blank lines together, and keep screen
+# contents after quitting a man page.
+export MANPAGER='less -isX'
 
 # Colour bash man pages
 export LESS_TERMCAP_mb=$(printf '\e[01;31m') # enter blinking mode - red
