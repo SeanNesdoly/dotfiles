@@ -104,6 +104,7 @@ nnoremap <Leader><Tab> :e#<CR>
 
 " Find files, buffers, lines, and marks with fzf.vim
 nnoremap <Leader>ff :Files<CR>
+nnoremap <Leader>fF :Files<Space>
 nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fl :Lines<CR>
 nnoremap <Leader>fm :Marks<CR>
