@@ -32,5 +32,9 @@
 [alias]
 	st = status --short --branch
 	c = commit -v
+
+  # Show changes that are staged/cached for the next commit
 	ds = diff --staged
+	dc = diff --cached
+
 	bv = branch -vv
