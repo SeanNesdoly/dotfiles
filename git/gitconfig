@@ -5,6 +5,9 @@
 	excludesFile = ~/.gitignore_global
 	autocrlf = input
 	eol = lf
+
+  # Pipe output to pager with `git -p`
+  pager = less -iRX -+F
 [push]
 	default = nothing
 [color]
