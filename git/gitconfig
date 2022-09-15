@@ -1,6 +1,11 @@
 [user]
 	name = Sean Nesdoly
 	email = srnesdoly@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFmo+c8wD4xh6rND42bo0Hpg8i7SYFg0iZocsij8afGM srnesdoly@gmail.com
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
 [core]
 	excludesFile = ~/.gitignore_global
 	autocrlf = input
