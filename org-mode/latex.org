@@ -15,8 +15,7 @@
 #+LATEX_HEADER: \usepackage{titling}
 #+LATEX_HEADER: \setlength{\droptitle}{-20mm}
 
-#+LATEX_HEADER: \usepackage[yyyymmdd]{datetime}
-#+LATEX_HEADER: \renewcommand{\dateseparator}{--}
+#+LATEX_HEADER: \usepackage[style=iso,24hr]{datetime2}
 
 #+LATEX_HEADER: \usepackage[svgnames,hyperref]{xcolor}
 
