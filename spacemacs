@@ -637,10 +637,13 @@ before packages are loaded."
   ;; Show whitespace in makefiles
   (add-hook 'makefile-mode-hook 'whitespace-mode)
 
-  ;; Configure build process for exporting org files to PDF via 'pdflatex'.
-  ;; Supports BibTeX citations, nomenclature ('nomencl'), and syntax
-  ;; highlighting via the LaTeX 'minted' package (depends on the backend Python
-  ;; package 'Pygments', installable via pip).
+  ;; Configure build process for exporting org files to PDF via `pdflatex'.
+  ;; Supports BibTeX citations, nomenclature (`nomencl'), and syntax
+  ;; highlighting.
+  ;;
+  ;; WARNING: using `-shell-escape' permits the LaTeX processor (here,
+  ;; `pdflatex') to run arbitrary commands on your machine; only use this on
+  ;; input from trusted sources.
   (setq org-latex-pdf-process
         '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
           "bibtex %b"
@@ -648,17 +651,19 @@ before packages are loaded."
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
           "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
+  ;; Syntax highlighting with LaTeX package `minted', which uses the Python
+  ;; package `Pygments', installable via `pip'. See variable
+  ;; `LaTeX-minted-pygmentize-program', which should point to the `pygmentize'
+  ;; executable (/opt/homebrew/bin/pygmentize).
+  (setq org-latex-listings 'minted
+        org-latex-packages-alist '(("" "minted")))
+
   ;; Bibtex defaults
   (setq org-ref-default-bibliography '("~/bibliography/Mendeley/library.bib")
         org-ref-pdf-directory "~/bibliography/bibtex-pdfs/"
         org-ref-bibliography-notes "~/bibliography/notes.org")
   (setq bibtex-completion-bibliography "~/bibliography/Mendeley/library.bib"
         bibtex-completion-library-path "~/bibliography/bibtex-pdfs")
-
-  ;; Syntax highlighting with the LaTeX package 'minted', which uses the Python
-  ;; backend 'Pygments'.
-  (setq org-latex-listings 'minted
-        org-latex-packages-alist '(("" "minted")))
 
   ;; (add-to-list 'load-path "~/.emacs.d/elpa/26.3/develop/org-plus-contrib-20200727/ob-julia.el")
   ;; (org-babel-do-load-languages
