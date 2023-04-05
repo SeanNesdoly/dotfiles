@@ -43,10 +43,11 @@ This function should only modify configuration layer settings."
      syntax-checking
      (org :variables
           org-startup-indented t
+          org-startup-numerated nil
           org-startup-with-inline-images t
           org-image-actual-width '(600)
           org-goto-auto-isearch nil
-          org-pretty-entities t
+          org-pretty-entities nil
           org-hide-emphasis-markers t
           org-enable-appear-support t
           org-ellipsis "⤵"
