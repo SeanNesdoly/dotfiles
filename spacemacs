@@ -299,7 +299,7 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13.0
+                               :size 14.0
                                :weight normal
                                :width normal)
 
@@ -463,12 +463,7 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
-   dotspacemacs-line-numbers '(:relative nil
-                               :visual t
-                               :disabled-for-modes dired-mode
-                                                   doc-view-mode
-                                                   pdf-view-mode
-                               :size-limit-kb 10000)
+   dotspacemacs-line-numbers nil
 
    ;; Code folding method. Possible values are `evil', `origami' and `vimish'.
    ;; (default 'evil)
