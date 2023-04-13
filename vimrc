@@ -68,6 +68,10 @@ set colorcolumn=+1             " highlight characters in the column textwidth+1
 set linebreak                  " break lines, intelligently
 set nowrap                     " to avoid confusion, do not visually wrap lines
 
+" ------------------------------ Advanced settings -----------------------------
+" Retain local undo tree by hiding buffers, rather than abandoning them
+set hidden
+
 " ------------------------- Custom leader key mappings -------------------------
 " Primary leader key: space (akin to spacemacs)
 let mapleader = "\<Space>"
