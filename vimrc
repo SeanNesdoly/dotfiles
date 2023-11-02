@@ -141,6 +141,8 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'dense-analysis/ale'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
