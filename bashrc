@@ -16,6 +16,7 @@ complete -cf man
 #     complete -o "default" -o "nospace" -W \
 #     "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" \
 #     scp sftp ssh;
+set -o vi             # Use vi mode with Readline
 
 # Line wrap on window resize
 shopt -s checkwinsize

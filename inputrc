@@ -1,0 +1,21 @@
+# readline config
+#
+# Sean Nesdoly
+# 2023-11-23
+#-------------------------------------------------------------------------------
+set editing-mode vi
+
+# Change cursor type to block & beam for normal & insert modes, respectively
+set show-mode-in-prompt on
+set vi-ins-mode-string "\1\e[6 q\2"
+set vi-cmd-mode-string "\1\e[2 q\2"
+
+$if mode=vi
+    # NORMAL mode keybindings
+    set keymap vi-command
+    Control-l: clear-screen
+
+    # INSERT mode keybindings
+    set keymap vi-insert
+    Control-l: clear-screen
+$endif
