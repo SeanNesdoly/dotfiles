@@ -16,9 +16,13 @@ set vi-cmd-mode-string "\033[2 q"
 $if mode=vi
     # NORMAL mode keybindings
     set keymap vi-command
-    Control-l: clear-screen
+        Control-l: clear-screen
+        Control-a: beginning-of-line
+        Control-e: end-of-line
 
     # INSERT mode keybindings
     set keymap vi-insert
-    Control-l: clear-screen
+        Control-l: clear-screen
+        Control-a: beginning-of-line
+        Control-e: end-of-line
 $endif
