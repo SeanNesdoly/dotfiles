@@ -17,7 +17,7 @@ autocmd InsertLeave * setlocal cursorline
 " Display current mode on last line AND by changing cursor style
 set showmode                   " show when in Insert, Replace, or Visual modes
 let &t_SI = "\033[6 q"         " start Insert mode (steady bar, xterm)
-let &t_EI = "\033[2 q"         " end Insert mode (steady block)
+let &t_EI = "\033[1 q"         " end INSERT mode (blinking block)
 let &t_SR = "\033[4 q"         " REPLACE mode (steady underline)
 
 " Status line, last line
