@@ -1,13 +1,16 @@
-" Configuration file for Vim
+" Vim config
 " Sean Nesdoly
 " Date created: 2017-01-29
 " ------------------------------------------------------------------------------
 
 " ------------------------------ UI configurations -----------------------------
 " Colour scheme (https://vimcolorschemes.com/)
+autocmd VimEnter * ++nested colorscheme gruvbox
+colorscheme desert " fallback
+
+" High-contrast background, for the eyes
+set background=dark
 let g:gruvbox_contrast_dark='hard'
-autocmd vimenter * ++nested colorscheme gruvbox
-set background=dark            " high-contrast background, for the eyes
 
 " Highlight current line and toggle it when entering or leaving INSERT mode
 set cursorline
@@ -36,12 +39,12 @@ set lazyredraw                 " delay redraw for macros, untyped commands
 
 " -------------------------- Text-processing settings --------------------------
 syntax enable                  " enable syntax processing
-set backspace=indent,eol,start " make 'delete' key work in insert mode
+set backspace=indent,eol,start " make 'delete' key work in INSERT mode
 set encoding=utf8              " UTF-8 character encoding
-set spell spelllang=en_ca      " Canadian spellchecking (z=, [s, ]s)
+set spelllang=en_ca            " Canadian spellchecking (z=, [s, ]s)
 
-" Detect <Esc> sequences with function keys (e.g., arrows) in Insert mode. To
-" quickly detect a single <Esc> sequence in Insert mode, we set 'ttimeoutlen' to
+" Detect <Esc> sequences with function keys (e.g., arrows) in INSERT mode. To
+" quickly detect a single <Esc> sequence in INSERT mode, we set 'ttimeoutlen' to
 " >=0 (default -1, unused).
 set esckeys
 set timeoutlen=3000            " Time out on firing mappings
@@ -67,7 +70,7 @@ set smartindent                " (mostly) indent files correctly
 
 " -------------------------------- Line display --------------------------------
 set textwidth=80               " treat 80 characters as the standard line length
-set colorcolumn=+1             " highlight characters in the column textwidth+1
+set colorcolumn=+1             " highlight screen column at 'textwidth+1'
 set linebreak                  " break lines, intelligently
 set nowrap                     " to avoid confusion, do not visually wrap lines
 
@@ -76,7 +79,7 @@ set nowrap                     " to avoid confusion, do not visually wrap lines
 set hidden
 
 " ------------------------- Custom leader key mappings -------------------------
-" Primary leader key: space (akin to spacemacs)
+" Primary leader key: <Space> (akin to spacemacs) (default is backslash)
 let mapleader = "\<Space>"
 
 " Split windows, evil-like
@@ -149,3 +152,13 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
 call plug#end()
 
+" ---------------------------- Sean's Vim quick reference -----------------------------
+" g keystrokes (:h g)
+"   gu/U: Apply lower- or upper-case transformation to motion
+"   ga  : Print ASCII value of character under cursor in decimal, hex, and octal
+"   gx  : Open file/URL located at filepath under cursor
+"
+" :set list -> toggles display of invisible characters
+"
+" Registers (") (CTRL-R {register})
+"   "+    system clipboard
