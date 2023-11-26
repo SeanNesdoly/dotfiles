@@ -1,17 +1,17 @@
-# readline config
+# Readline config
 #
 # Sean Nesdoly
 # 2023-11-23
 #-------------------------------------------------------------------------------
 set editing-mode vi
 
-# Change cursor type to block & beam for normal & insert modes, respectively
 # Decrease delay for ambiguous key sequences (Esc). Default = 500 ms.
 set keyseq-timeout 100
 
+# Change cursor type to block & pipe for NORMAL & INSERT modes, respectively
 set show-mode-in-prompt on
-set vi-ins-mode-string "\1\e[6 q\2"
-set vi-cmd-mode-string "\1\e[2 q\2"
+set vi-ins-mode-string "\033[6 q"
+set vi-cmd-mode-string "\033[2 q"
 
 $if mode=vi
     # NORMAL mode keybindings

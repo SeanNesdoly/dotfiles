@@ -9,18 +9,21 @@ let g:gruvbox_contrast_dark='hard'
 autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark            " high-contrast background, for the eyes
 
-" Highlight current line and toggle it when entering or leaving Insert mode
+" Highlight current line and toggle it when entering or leaving INSERT mode
 set cursorline
 autocmd InsertEnter * setlocal nocursorline
 autocmd InsertLeave * setlocal cursorline
 
-" Display current mode on last line AND by changing cursor style
-set showmode                   " show when in Insert, Replace, or Visual modes
-let &t_SI = "\033[6 q"         " start Insert mode (steady bar, xterm)
+" Change cursor style based on current mode by defining Vim's
+" 'terminal-output-codes' for use with Unix's 'terminfo' database
+let &t_SI = "\033[6 q"         " start INSERT mode (steady pipe, xterm)
 let &t_EI = "\033[1 q"         " end INSERT mode (blinking block)
-let &t_SR = "\033[4 q"         " REPLACE mode (steady underline)
+let &t_TI = "\033[1 q"         " terminal initialization string (fixes bug when
+                               " using custom cursors in readline's vi mode)
+let &t_SR = "\033[4 q"         " start REPLACE mode (steady underline)
 
-" Status line, last line
+" Status (last) line
+set showmode                   " display current mode on last line
 set ruler                      " show line & column number
 set laststatus=2               " show status line, even with only 1 window
 set showcmd                    " show partial commands on last line
