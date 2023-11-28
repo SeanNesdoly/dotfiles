@@ -11,6 +11,10 @@ export EDITOR='vim'
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth'
 
+# Make Homebrew more secure
+export HOMEBREW_NO_INSECURE_REDIRECT=1
+export HOMEBREW_CASK_OPTS=--require-sha
+
 # Configure java.
 # The precedence of java executables in PATH does not always reflect which JVM
 # is selected to run; instead, this seems to be controlled by
