@@ -36,8 +36,8 @@ alias egrep='egrep --color=auto'
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# Correct previous console commands with 'The Fuck' utility
-eval "$(thefuck --alias)"
+# Correct previous console commands with `thefuck` utility
+command -v thefuck > /dev/null && eval "$(thefuck --alias)"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
