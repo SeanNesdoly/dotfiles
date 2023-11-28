@@ -127,6 +127,14 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+" ALE: Asynchronous Lint Engine
+let g:ale_fixers = {
+\    '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+
+" Navigate to next error identified by ALE
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
 " YouCompleteMe
 nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
