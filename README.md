@@ -53,3 +53,11 @@ without changing the system-wide default:
 1. Terminal --> Preferences --> General
 2. Under `Shells open with`, set the `Command (complete path)` to
 `/opt/homebrew/bin/bash`
+
+# Common, yet easily forgotten, commands
+- Merge PDF files with `ImageMagick`:
+  ```bash
+  magick -density 150 in{1,2}.jpg out.pdf
+  ```
+  *(The macOS `Automator` python script `/System/Library/Automator/Combine\ PDF\
+  Pages.action/Contents/Resources/join.py` has been moved or removed).*
