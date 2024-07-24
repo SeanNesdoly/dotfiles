@@ -152,6 +152,7 @@ endif
 
 call plug#begin()
 Plug 'morhetz/gruvbox'
+Plug 'LukeGoodsell/nextflow-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
