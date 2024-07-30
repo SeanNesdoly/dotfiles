@@ -9,8 +9,8 @@
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
-alias ls="ls -F --color=tty"
-alias ll="ls -lF --color=tty"
+alias ls="ls -F --color=auto"
+alias ll="ls -lF --color=auto"
 alias less="less -iRX"
 alias g="git"
 alias tree="tree -C" # add colours
