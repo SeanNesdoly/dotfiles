@@ -35,7 +35,8 @@
 [merge]
 	conflictStyle = diff3
 [alias]
-	l = log --graph --oneline
+	l = log --graph --oneline -n 10
+	ll = log --graph --oneline
 	st = status --short --branch
 	c = commit -v
 
@@ -44,3 +45,5 @@
 	dc = diff --cached
 
 	bv = branch -vv
+[log]
+	date = iso8601-strict
