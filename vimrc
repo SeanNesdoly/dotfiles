@@ -135,10 +135,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" ALE: Asynchronous Lint Engine
-let g:ale_fixers = {
-\    '*': ['remove_trailing_lines', 'trim_whitespace'],
-\}
 
 " Navigate to next error identified by ALE
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
@@ -169,6 +165,18 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
 call plug#end()
 
+" ALE: Asynchronous Lint Engine (github.com/dense-analysis/ale)
+let g:ale_virtualtext_cursor = 'current'
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
+let g:ale_fixers = {
+\    '*' : ['remove_trailing_lines', 'trim_whitespace'],
+\}
+" Map filetypes to linters (verify with :ALEInfo)
+let g:ale_linter_aliases = {
+\   'nextflow': 'groovy'
+\}
+
 " ---------------------------- Sean's Vim quick reference -----------------------------
 " g keystrokes (:h g)
 "   gu/U: Apply lower- or upper-case transformation to motion
@@ -179,3 +187,12 @@ call plug#end()
 "
 " Registers (") (CTRL-R {register})
 "   "+    system clipboard
+"
+" ALE
+"   ALEFixSuggest   : Suggest tools to fix code for the active filetype
+"   <CTRL-X><CTRL-O>: Triggers manual auto completion
+"
+" YouCompleteMe
+"   <Leader>CTRL-Space
+"     Trigger semantic completion if a Language Server Protocol (LSP) is
+"     available for the active filetype
