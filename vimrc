@@ -5,12 +5,20 @@
 
 " ------------------------------ UI configurations -----------------------------
 " Colour scheme (https://vimcolorschemes.com/)
-autocmd VimEnter * ++nested colorscheme gruvbox
-colorscheme desert " fallback
+if !empty(glob('~/.vim/plugged/gruvbox/')) " assumes use of 'junegunn/vim-plug'
+    autocmd VimEnter * ++nested colorscheme gruvbox
 
-" High-contrast background, for the eyes
-set background=dark
-let g:gruvbox_contrast_dark='hard'
+    " High-contrast background, for the eyes
+    set background=dark
+    let g:gruvbox_contrast_dark='hard'
+else " fallback
+    colorscheme desert
+    autocmd ColorScheme desert {
+        hi ColorColumn ctermfg=241 ctermbg=241 cterm=NONE
+        hi LineNr ctermfg=243 cterm=NONE
+    }
+endif
+
 
 " Highlight current line and toggle it when entering or leaving INSERT mode
 set cursorline
