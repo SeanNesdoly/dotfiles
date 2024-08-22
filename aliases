@@ -39,6 +39,9 @@ alias path='echo -e ${PATH//:/\\n}'
 # Correct previous console commands with `thefuck` utility
 command -v thefuck > /dev/null && eval "$(thefuck --alias)"
 
+# Slurm workload manager
+alias sq='squeue -u "$USER"'
+
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
