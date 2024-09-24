@@ -12,20 +12,30 @@
 	eol = lf
 
 	# Pipe output to pager with `git -p`
-	pager = less -iRX -+F
+	pager = diff-so-fancy | less --tabs=4 -iRXF
 [push]
 	default = nothing
 [color]
 	ui = auto
+[color "diff"]
+	# github.com/so-fancy/diff-so-fancy
+	meta = "11"
+	frag = "magenta bold"
+	func = "146 bold"
+	commit = "yellow bold"
+	old = "red bold"
+	new = "green bold"
+	whitespace = "red reverse"
+[color "diff-highlight"]
+	# github.com/so-fancy/diff-so-fancy
+	oldNormal = "red bold"
+	oldHighlight = "red bold 52"
+	newNormal = "green bold"
+	newHighlight = "green bold 22"
 [color "branch"]
 	current = yellow reverse
 	local = yellow
 	remote = green
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
 [color "status"]
 	added = yellow
 	changed = green
