@@ -53,8 +53,8 @@ fi
 # github.com/junegunn/fzf: command-line fuzzy finder.
 # Run "$(brew --prefix fzf)"/install to create ~/.fzf.* scripts.
 if command -v fzf > /dev/null && [ -f ~/.fzf.bash ]; then
-    # shellcheck source=../.fzf.bash
-    source "$HOME"/.fzf.bash
+    # Set up fzf key bindings and fuzzy completion
+    eval "$(fzf --bash)"
 
     # Set fd (https://github.com/sharkdp/fd) as the default source for fzf
     if command -v fd > /dev/null; then

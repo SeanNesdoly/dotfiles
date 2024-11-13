@@ -18,7 +18,7 @@ if command -v "$HOME"/.pyenv/bin/pyenv > /dev/null; then
     eval "$(pyenv init --path)"
 fi
 
-for file in "${HOME}"/.{bashrc,path,exports,aliases}; do
+for file in "${HOME}"/.{path,bashrc,exports,aliases}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
