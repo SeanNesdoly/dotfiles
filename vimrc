@@ -19,6 +19,8 @@ else " fallback
     }
 endif
 
+" Detect specific file extensions to correctly set filetypes
+au BufRead,BufNewFile *.smk set filetype=python " snakemake
 
 " Highlight current line and toggle it when entering or leaving INSERT mode
 set cursorline
