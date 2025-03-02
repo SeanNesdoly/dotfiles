@@ -1,26 +1,37 @@
-#+EMAIL: srnesdoly@gmail.com
+#+EMAIL: s.r.nesdoly@gmail.com
 #+OPTIONS: toc:nil H:3 num:2 tags:not-in-toc
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [a4paper]
 
-#+LATEX_HEADER: \usepackage[margin=25mm]{geometry}
+#+LATEX_HEADER: \usepackage[margin=38mm]{geometry}
 #+LATEX_HEADER: \usepackage{parskip}
-#+LATEX_HEADER: \usepackage[labelfont=bf,sc]{caption}
-#+LATEX_HEADER: \usepackage{float}
 #+LATEX_HEADER: \usepackage{multicol}
 #+LATEX_HEADER: \usepackage{multirow}
 #+LATEX_HEADER: \usepackage{fancyhdr}
 #+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \usepackage[style=iso,24hr]{datetime2}
+
+#+LATEX_HEADER: \usepackage[utf8x]{inputenc}
+
+#+LATEX_HEADER: \usepackage[labelfont=bf,sc]{caption}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage{wrapfig}
+#+LATEX_HEADER: \usepackage{rotating}
 
 #+LATEX_HEADER: \usepackage{titling}
 #+LATEX_HEADER: \setlength{\droptitle}{-20mm}
 
-#+LATEX_HEADER: \usepackage[style=iso,24hr]{datetime2}
-
 #+LATEX_HEADER: \usepackage[svgnames,hyperref]{xcolor}
+#+LATEX_HEADER: \usepackage[hyphens,url]{hyperref}
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=DarkBlue, urlcolor=blue, citecolor=blue}
+#+LATEX_HEADER: \usepackage[normalem]{ulem}
 
-#+LATEX_HEADER: \usepackage{hyperref}
-#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=DarkBlue, citecolor=blue}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{siunitx}
+#+LATEX_HEADER: \usepackage{fourier-orns}
+#+LATEX_HEADER: \usepackage{minted}
 
 #+LATEX_HEADER: \usepackage[super, sort&compress, numbers]{natbib}
 #+LATEX_HEADER: \renewcommand{\bibnumfmt}[1]{#1.}
