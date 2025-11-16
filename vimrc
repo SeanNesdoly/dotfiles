@@ -165,6 +165,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'dense-analysis/ale'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
+Plug 'github/copilot.vim'
 call plug#end()
 
 " ALE: Asynchronous Lint Engine (github.com/dense-analysis/ale)
