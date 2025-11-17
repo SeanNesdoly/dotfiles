@@ -26,3 +26,8 @@ $if mode=vi
         Control-a: beginning-of-line
         Control-e: end-of-line
 $endif
+
+set colored-stats On
+set visible-stats On
+set colored-completion-prefix On
+set mark-symlinked-directories On
