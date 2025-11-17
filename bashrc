@@ -5,6 +5,9 @@
 # Sean Nesdoly
 # 2017-08-15
 
+# Bitwarden SSH Agent
+export SSH_AUTH_SOCK=~/.bitwarden-ssh-agent.sock
+
 # Prevent file clobbering
 set -o noclobber
 
