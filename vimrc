@@ -137,7 +137,6 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-
 " Navigate to next error identified by ALE
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
@@ -179,6 +178,13 @@ let g:ale_fixers = {
 let g:ale_linter_aliases = {
 \   'nextflow': 'groovy'
 \}
+
+" Remap Copilot key bindings
+let g:copilot_no_tab_map = v:true
+imap <silent><script><expr> <C-K> copilot#Accept("\<CR>")
+imap <silent><script><expr> <C-L> copilot#Next()
+imap <silent><script><expr> <C-H> copilot#Previous()
+nnoremap <C-K> :Copilot panel<CR>
 
 " ---------------------------- Sean's Vim quick reference -----------------------------
 " g keystrokes (:h g)
