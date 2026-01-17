@@ -68,6 +68,7 @@ set smartcase                  " case-sensitive searching with uppercase letters
 
 set showmatch                  " highlight matching brackets --> [{()}]
 set wildmenu                   " visual autocomplete for the command menu
+set wildmode=longest:list,full " command-line completion behaviour
 
 " ----------------------- Tab settings, indent behaviour -----------------------
 set tabstop=4                  " number of spaces a tab counts for
