@@ -86,6 +86,9 @@ set linebreak                  " break lines, intelligently
 set nowrap                     " to avoid confusion, do not visually wrap lines
 
 " ------------------------------ Advanced settings -----------------------------
+" Search down into subdirectories when using :find command
+set path+=**
+
 " Retain local undo tree by hiding buffers, rather than abandoning them
 set hidden
 
